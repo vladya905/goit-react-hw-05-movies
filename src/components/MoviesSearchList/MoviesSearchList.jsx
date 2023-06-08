@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { searchApiService } from 'services/api-service';
+import PropTypes from 'prop-types';
 
 export default function MoviesSearchList({ search }) {
   const location = useLocation();
@@ -37,3 +38,6 @@ export default function MoviesSearchList({ search }) {
     </ul>
   );
 }
+MoviesSearchList.propTypes = {
+  search: PropTypes.string.isRequired,
+};
